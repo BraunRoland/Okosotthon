@@ -53,6 +53,7 @@ namespace Okosotthon
         {
             base.GyariBeallitasokVisszaallitasa();
             this.ZartE = true;
+            this.pinKod = "0000";
         }
     }
 }
