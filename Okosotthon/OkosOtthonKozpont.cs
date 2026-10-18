@@ -26,6 +26,27 @@ namespace Okosotthon
             }
         }
 
+        public void Extrak()
+        {
+            foreach(OkosEszkoz eszkoz in eszkozok)
+            {
+                if (eszkoz is IHangjelzo h)
+                {
+                    h.Csipog(400);
+                    h.VeszjelzesInditasa();
+                }
+                if (eszkoz is IStatisztika s)
+                {
+                    s.StatisztikatKeszit();
+                }
+                if(eszkoz is IIdozitheto i)
+                {
+                    i.IdozitestBeallit(5);
+                    i.getMaradtIdo();
+                }
+            }
+        }
+
         public int RendszerDiagnosztikaFuttatasa()
         {
             int sikeresTest = 0;
