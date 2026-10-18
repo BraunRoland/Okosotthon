@@ -49,6 +49,7 @@ namespace Okosotthon
         public abstract string AllapotJelentes();
         protected abstract bool OnTesztFuttatasa();
 
+
         public string Azonosito { get; private set; }
         public string Nev { get; private set; }
         public bool OnlineE { get; private set; }

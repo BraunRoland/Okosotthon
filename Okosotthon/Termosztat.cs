@@ -44,5 +44,11 @@ namespace Okosotthon
                 return false;
             }
         }
+
+        public override void GyariBeallitasokVisszaallitasa()
+        {
+            base.GyariBeallitasokVisszaallitasa();
+            this.JelenlegiHomerseklet = 21.0;
+        }
     }
 }
