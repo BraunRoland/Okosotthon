@@ -4,20 +4,22 @@ using System.Text;
 
 namespace Okosotthon
 {
-    internal class OkosZar : OkosEszkoz, IHangjelzo, IStatisztika
+    public class OkosZar : OkosEszkoz, IHangjelzo, IStatisztika
     {
         private bool zartE;
         private string pinKod;
         private int nyitasok;
 
-        public OkosZar(string azonosito, string nev) : base(azonosito, nev)
+        public OkosZar(string azonosito, string nev, string pinKod) : base(azonosito, nev)
         {
             this.ZartE = true;
             this.Nyitasok = 0;
+            this.PinKod = pinKod;
         }
 
         public bool ZartE { get; private set; }
         public int Nyitasok { get; private set; }
+        public string PinKod { get; private set; }
 
         public override string AllapotJelentes()
         {
@@ -36,7 +38,8 @@ namespace Okosotthon
             if (parancs.StartsWith("NYITAS:"))
             {
                 string[] reszek = parancs.Split(":");
-                if (reszek[1] == this.pinKod)
+                Console.WriteLine("pinkód: " + this.PinKod+", megadott kód: "+ reszek[1]);
+                if (reszek[1] == this.PinKod)
                 {
                     this.ZartE = false;
                     this.Nyitasok++;
@@ -62,7 +65,7 @@ namespace Okosotthon
         {
             base.GyariBeallitasokVisszaallitasa();
             this.ZartE = true;
-            this.pinKod = "0000";
+            this.PinKod = "0000";
             this.Nyitasok = 0;
         }
 

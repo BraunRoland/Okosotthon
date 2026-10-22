@@ -1,3 +1,4 @@
 <Solution>
-  <Project Path="Okosotthon/Okosotthon.csproj" />
+  <Project Path="Program/Program.csproj" />
+  <Project Path="Tesztek/Tesztek.csproj" Id="ffbf7ba8-11b4-40a9-9b45-7461d537a8a4" />
 </Solution>

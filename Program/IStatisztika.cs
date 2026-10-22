@@ -4,9 +4,8 @@ using System.Text;
 
 namespace Okosotthon
 {
-    internal interface IIdozitheto
+    public interface IStatisztika
     {
-        void IdozitestBeallit(int perc);
-        int getMaradtIdo();
+        string StatisztikatKeszit();
     }
 }

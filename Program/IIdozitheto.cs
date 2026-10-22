@@ -4,10 +4,9 @@ using System.Text;
 
 namespace Okosotthon
 {
-    internal interface IHangjelzo
+    public interface IIdozitheto
     {
-        void Csipog(int hosszu);
-
-        void VeszjelzesInditasa();
+        void IdozitestBeallit(int perc);
+        int getMaradtIdo();
     }
 }

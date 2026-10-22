@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 namespace Okosotthon
 {
-    internal class Termosztat : OkosEszkoz,IIdozitheto,IStatisztika
+    public class Termosztat : OkosEszkoz,IIdozitheto,IStatisztika
     {
         private double jelenlegiHomerseklet;
         private double celHomerseklet;
@@ -31,8 +32,9 @@ namespace Okosotthon
            if (parancs.StartsWith("BEALLIT_HOMERSEKLET:"))
             {
                 string[] reszek = parancs.Split(":");
-                double ujHomerskelet = double.Parse(reszek[1]);
-                this.JelenlegiHomerseklet = ujHomerskelet;
+                Console.WriteLine(reszek[1]);
+                double ujHomerskelet = double.Parse(reszek[1], CultureInfo.InvariantCulture);
+                this.CelHomerseklet = ujHomerskelet;
             }
         }
 

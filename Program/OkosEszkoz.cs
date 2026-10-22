@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Okosotthon
 {
-    internal abstract class OkosEszkoz
+    public abstract class OkosEszkoz
     {
         private string azonosito;
         private string nev;

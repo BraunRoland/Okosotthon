@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Okosotthon
 {
-    internal class OkosOtthonKozpont
+    public class OkosOtthonKozpont
     {
         private readonly List<OkosEszkoz> eszkozok;
 

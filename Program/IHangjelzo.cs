@@ -4,8 +4,10 @@ using System.Text;
 
 namespace Okosotthon
 {
-    internal interface IStatisztika
+    public interface IHangjelzo
     {
-        string StatisztikatKeszit();
+        void Csipog(int hosszu);
+
+        void VeszjelzesInditasa();
     }
 }

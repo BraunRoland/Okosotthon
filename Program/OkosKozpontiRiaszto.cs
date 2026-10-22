@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Okosotthon
 {
-    internal class OkosKozpontiRiaszto : OkosEszkoz, IHangjelzo, IIdozitheto, IStatisztika
+    public class OkosKozpontiRiaszto : OkosEszkoz, IHangjelzo, IIdozitheto, IStatisztika
     {
         int idozito;
         int riasztasok;
